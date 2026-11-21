@@ -1,3 +1,42 @@
+# metacubexd
+
+![TypeScript](https://img.shields.io/badge/TypeScript-2563EB?style=flat-square)
+![Nuxt](https://img.shields.io/badge/Nuxt-0F766E?style=flat-square)
+![Electron](https://img.shields.io/badge/Electron-334155?style=flat-square)
+![Nitro](https://img.shields.io/badge/Nitro-B45309?style=flat-square)
+![Mihomo](https://img.shields.io/badge/Mihomo-6D28D9?style=flat-square)
+
+## 📌 项目简介
+
+Mihomo 的管理面板。仓库还包含桌面应用，以及将面板、控制服务与内核部署在一起的服务端版本。
+
+## 🏗️ 系统架构
+
+- Web 面板连接 Mihomo API，展示连接、规则和运行状态。
+- 桌面应用集成 Electron，服务端使用 Nitro 并配合共享 Agent 与配置编辑组件。
+
+## 📁 项目结构
+
+| 路径 | 用途 |
+| --- | --- |
+| [`packages/ui`](packages/ui) | Web 面板 |
+| [`apps/desktop`](apps/desktop) | 桌面应用 |
+| [`apps/server`](apps/server) | 服务端与容器入口 |
+| [`packages/agent`](packages/agent) | Agent 逻辑 |
+| [`docs`](docs) | 部署示例与说明 |
+
+## 🚀 如何启动
+
+已有 Mihomo 实例时，可启动独立 Web 面板，再在页面中填写控制地址。
+
+```sh
+docker run --rm -p 127.0.0.1:8080:80 ghcr.io/metacubex/metacubexd:latest
+```
+
+打开 `http://localhost:8080`。桌面应用、集成服务端和源码开发步骤见下方完整文档。
+
+## 上游完整文档
+
 <div align="center">
 
 # metacubexd
